@@ -1,0 +1,286 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>History</title>
+</head>
+<body>
+  <div class="">
+        <nav>
+            <ul>
+                <li><a href="#"  class="logo">
+                   <img src="./imge/logo.png">
+                   <span class="nav-item">Bệnh viện 108</span>
+                   </a>
+                </li>
+                <li><a href="#" style="text-decoration: none;">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-item">Trang chủ</span>
+                  </a></li>
+                  <li><a href="#"style="text-decoration: none;color=white">
+                    <i class="fas fa-list"></i>
+                    <span class="nav-item">Hồ sơ khám bệnh</span>
+                  </a></li>
+                  <li><a href="#" style="text-decoration: none;">
+                    <i class="fas fa-database"></i>
+                    <span class="nav-item">Lịch sử khám bệnh</span>
+                  </a></li>
+                  <li><a href="#" style="text-decoration: none;">
+                    <i class="fas fa-chart-bar"></i>
+                    <span class="nav-item">Attendance</span>
+                  </a></li>
+                  <li><a href="#" style="text-decoration: none;">
+                    <i class="fas fa-cog"></i>
+                    <span class="nav-item">Setting</span>
+                  </a></li>
+          
+                  <li><a href="#" style="text-decoration: none;" class="logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="nav-item">Đăng xuất</span>
+                  </a></li> 
+            </ul>
+        </nav>
+  </div>
+  <div class="main">
+      <div class="main-top">
+        <h1>Lịch sử khám bệnh</h1>
+      </div>
+      <div class="form">
+           <div class="nhap" >
+            <span>Ngày vào:</span>
+             <input type="date" class="form-control" id="star1" placeholder="Ngày vào" name="start">
+           </div>
+           <div class="nhap" >
+            <span>Ngày kết thúc:</span>
+             <input type="date" class="form-control" id="start2" placeholder="Ngày kế thúc " name="start">
+           </div>
+           <div class="nhap" >
+            <span>Số hồ sơ:</span>
+             <input type="text" class="form-control" id="start" placeholder="Số hồ sơ " name="start">
+           </div>
+           <div class="nhap" >
+            <span>Tên :</span>
+             <input type="text" class="form-control" id="myInput" placeholder="Tên bệnh nhân" name="start" onkeyup="searchFun()">
+           </div>
+           <div class="tim" >
+            <button id="btns" class="btn btn-primary">Tìm kiếm </button>
+           </div>
+      </div>
+      <div class="lichsu">
+        <div class="list">
+         
+          <h1>Danh sách khám bệnh </h1>
+          <table id="myTable" class="table">
+            <thead>
+              <tr>
+                <th>Số phiếu</th>
+                <th>Số hồ sơ</th>
+                <th>Tên bệnh nhân</th>
+                <th>Tuổi</th>
+                <th>Giới tính</th>
+                <th>Ngày khám</th>
+                <th>Ngày vào </th>
+                <th>Trạng thái </th>
+                <th>Hướng điều trị</th>
+                <th>Ngày kết thúc</th>
+              </tr>
+            </thead>
+  
+            <tbody>
+              <tr id="rede">
+                <td>1.10</td>
+                <td>23470308</td>
+                <td>Vương Thị Hòa</td>
+                <td>26</td>
+                <td>Nữ</td>
+                <td>Dịch vụ</td>
+                <td>24/02/2023 </td>
+                <td>Đã kết thúc</td>
+                <td>Cho đơn điều trị ngoài</td>
+                <td>24/03/2023</td>
+              </tr>
+              <tr>
+                <td>1.20</td>
+                <td>23470308</td>
+                <td>Vương Thị Hòa</td>
+                <td>26</td>
+                <td>Nữ</td>
+                <td></td>
+                <td>25/04/2023 </td>
+                <td>Đã kết thúc</td>
+                <td>Cho đơn điều trị ngoài</td>
+                <td>24/06/2023</td>
+              </tr>
+              <tr>
+                <td>3.0</td>
+                <td>234747</td>
+                <td>Phạm Thị Hoa Chi</td>
+                <td>33</td>
+                <td>Nữ</td>
+                <td>BHYT</td>
+                <td>25/04/2023 </td>
+                <td>Đã khám</td>
+                <td></td>
+                <td>24/06/2023</td>
+              </tr>
+              <tr>
+                <td>4.04</td>
+                <td>3768921</td>
+                <td>Nguyễn Thị Lành</td>
+                <td>44</td>
+                <td>Nữ</td>
+                <td>BHYT</td>
+                <td>25/05/2023 </td>
+                <td>Đã khám</td>
+                <td>Cho đơn điều trị ngoài  </td>
+                <td>17/06/2023</td>
+              </tr>
+              <tr>
+                <td>5.09</td>
+                <td>3768921</td>
+                <td>Nguyễn Thị Lành</td>
+                <td>44</td>
+                <td>Nữ</td>
+                <td>Dịch vụ</td>
+                <td>25/05/2023 </td>
+                <td>Đã khám</td>
+                <td>Điều trị</td>
+                <td>17/06/2023</td>
+              </tr>
+              <tr>
+                <td>1.10</td>
+                <td>23470308</td>
+                <td>Vương Thị Hòa</td>
+                <td>26</td>
+                <td>Nữ</td>
+                <td>Dịch vụ</td>
+                <td>24/02/2023 </td>
+                <td>Đã kết thúc</td>
+                <td>Cho đơn điều trị ngoài</td>
+                <td>24/03/2023</td>
+              </tr>
+              <tr>
+                <td>1.20</td>
+                <td>23470308</td>
+                <td>Vương Thị Hòa</td>
+                <td>26</td>
+                <td>Nữ</td>
+                <td></td>
+                <td>25/04/2023 </td>
+                <td>Đã kết thúc</td>
+                <td>Cho đơn điều trị ngoài</td>
+                <td>24/06/2023</td>
+              </tr>
+              <tr>
+                <td>3.0</td>
+                <td>234747</td>
+                <td>Phạm Thị Hoa Chi</td>
+                <td>33</td>
+                <td>Nữ</td>
+                <td>BHYT</td>
+                <td>25/04/2023 </td>
+                <td>Đã khám</td>
+                <td></td>
+                <td>24/06/2023</td>
+              </tr>
+              <tr>
+                <td>4.04</td>
+                <td>3768921</td>
+                <td>Nguyễn Thị Lành</td>
+                <td>44</td>
+                <td>Nữ</td>
+                <td>BHYT</td>
+                <td>25/05/2023 </td>
+                <td>Đã khám</td>
+                <td>Cho đơn điều trị ngoài  </td>
+                <td>17/06/2023</td>
+              </tr>
+              <tr>
+                <td>5.09</td>
+                <td>3768921</td>
+                <td>Nguyễn Thị Lành</td>
+                <td>44</td>
+                <td>Nữ</td>
+                <td>Dịch vụ</td>
+                <td>25/05/2023 </td>
+                <td>Đã khám</td>
+                <td>Điều trị</td>
+                <td>17/06/2023</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
+<tr id="mau">
+
+</tr>
+
+<script>
+  const searchFun = () =>{
+    let filter = trocument.getElementById('myInput').value.toUpperCase();
+    let myTable = document.getElementById('myTable');
+    for(var i=0 ; i<tr.length;i++){
+      let td= tr[i].getElementsByTagName('td')[0];
+    }
+  }
+// $('#btns').click(function(){
+//   var a = $('#start2').val()
+//   console.log(a)
+// })
+console.log(document.getElementById('btns'))
+
+ document.getElementById('btns').onclick = function(){
+     var a = document.getElementById('start2').value
+     console.log(a)
+ }
+
+var arr = [
+  {
+    soPhieu: [
+      1,2,3
+    ],
+    sohoso: "1212121211",
+    tenbenhnhan :"Vuong Thi Hoaa"
+
+  },
+  {
+    soPhieu: [
+      1,2,3
+    ],
+    sohoso: "1212121211",
+    tenbenhnhan :"Vuong Thi Hoaa"
+
+  },
+  {
+    soPhieu: [
+      1,2,3
+    ],
+    sohoso: "1212121211",
+    tenbenhnhan :"Vuong Thi Hoaa"
+
+  },
+]
+arr.map((item)=>{
+  console.log(item)
+  
+  var html = ` 
+                    <td>${item.soPhieu}</td>
+                    <td>${item.sohoso}</td>
+                    <td>${item.tenbenhnhan}</td>
+                  `
+ console.log(html)
+    document.getElementById('mau').innerHTML = html              
+})
+
+</script>
+   
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstsrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> -->
+</body>
+
+</html>

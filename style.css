@@ -1,0 +1,189 @@
+
+
+body{
+    background: rgb(226, 226, 226);
+    display: flex;
+  }
+  nav{
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    width: 100px;
+    /* width: 280px; */
+    background:   white;
+    /*thẻ overflow :hidden giấu text khi thu nhỏ  */
+    overflow: hidden;
+    transition: 1s;
+  }
+  nav:hover{
+    width: 280px;
+    transition: 1s;
+  }
+  ul {
+    list-style: none;
+    margin-left: -20px;
+    }
+  .logo{
+    text-align: center;
+    display: flex;
+    margin: 10px 0 0 10px;
+    padding-bottom: 3rem;
+    text-decoration: none;
+    color:rgb(73, 66, 66);                  
+  }
+  
+  .logo img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+  .logo span{
+    font-weight: bold;
+    padding-left: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+  
+  }
+  a{
+    position: relative;
+    width: 280px;
+    font-size: 14px;
+    color: rgb(85, 83, 83);
+    display: table;
+    padding: 10px;  
+    
+  }
+  .nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 18px;
+    font-size: 19px;
+    color :#686666
+ 
+  }
+  nav .fas{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 15px;
+    font-size: 20px;
+    text-align: center;
+    color : #183153;
+  }
+
+  a:hover{
+    background-color: #34AF6D;
+  }
+  a:hover i{
+    color: white;
+    transition: 0.5s;
+    
+  }
+  .logout{
+    position: absolute;
+    bottom: 4rem;
+  }
+
+  .main{
+    position: relative;
+    padding: 20px;
+    width: 100%;
+   background-color: rgb(241 241 241);
+  
+  }
+  .main-top{
+    width: 100%;
+    text-align: center;
+  }
+  .main-top h1{
+    font-size: 31px;
+    font-weight: 1000;
+  }
+  .form{
+    display: flex;
+    width: 100%;
+    margin: 20px;
+    background-color: rgb(241 241 241);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .nhap{
+    margin-right: 30px;
+  }
+  .tim{
+    margin-top: 23px ;
+
+  }
+.tim button{
+  background-color: white;
+  color: black;
+}
+.tim button:hover{
+  background-color: #34AF6D;
+}
+.lichsu{
+  margin-top: 20px;
+  text-transform: capitalize;
+  text-align: center;
+}
+.list{
+  width: 100%;
+  padding: 10px;
+  margin-top: 80px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.list h1{
+  font-size: 31px;
+  font-weight: 1000;
+}
+.table{
+  
+  margin: 25px 0;
+  font-size: 15px;
+  min-width: 100%;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+table thead tr{
+  color: #fff;
+  background: #34AF6D;
+  text-align: left;
+  font-weight: bold;
+}
+.table th,
+.table td{
+  padding: 12px 15px;
+}
+.table tbody tr{
+  border-bottom: 1px solid #ddd;
+}
+.table tbody tr:nth-of-type(odd){
+  background: #f3f3f3;
+}
+/*.table tbody tr.active{
+  font-weight: bold;
+  color: #4AD489;
+}
+*/
+.table tbody tr:last-of-type{
+  border-bottom: 2px solid #4AD489;
+}
+.table button{
+  padding: 6px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #4AD489;
+}
+.table button:hover{
+  background: #4AD489;
+  color: #fff;
+  transition: 0.5rem;
+}
+
+
+ 
